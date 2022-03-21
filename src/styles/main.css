@@ -1,0 +1,202 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- Very Dark Gray: hsl(0, 0%, 17%)
+- Dark Gray: hsl(0, 0%, 59%)
+
+## Typography
+
+### Body Copy
+
+- Font size (text input): 18px
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 400, 500, 700
+
+
+*/
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #969696;
+  min-height: 100vh; }
+
+#map {
+  position: relative;
+  height: calc(100vh - 25rem);
+  width: 100%;
+  z-index: 1; }
+  @media only screen and (max-width: 82.8125em) {
+    #map {
+      height: calc(100vh - 28rem); } }
+  @media only screen and (max-width: 63.25em) {
+    #map {
+      height: calc(100vh - 30rem); } }
+  @media only screen and (max-width: 43.75em) {
+    #map {
+      height: calc(100vh - 32.5rem); } }
+
+.leaflet-control-zoom {
+  display: none; }
+
+header {
+  background-image: url("./../images/pattern-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+  height: 25rem;
+  position: relative; }
+  @media only screen and (max-width: 82.8125em) {
+    header {
+      height: 28rem; } }
+  @media only screen and (max-width: 63.25em) {
+    header {
+      height: 30rem; } }
+  @media only screen and (max-width: 43.75em) {
+    header {
+      height: 32.5rem; } }
+
+@media only screen and (max-width: 43.75em) {
+  .header {
+    padding: 3rem; } }
+
+.header__title {
+  color: white;
+  font-size: 2.7rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 3rem; }
+
+.header__form {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem; }
+  @media only screen and (max-width: 43.75em) {
+    .header__form {
+      width: 100%; } }
+
+.header__input {
+  padding: 2rem;
+  cursor: pointer;
+  width: 55rem;
+  border: none; }
+  .header__input::placeholder {
+    color: #969696;
+    font-size: 1.8rem; }
+    @media only screen and (max-width: 43.75em) {
+      .header__input::placeholder {
+        font-size: 1.4rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .header__input {
+      width: 100%; } }
+
+.header__input-error {
+  background-color: #e83a14;
+  color: white; }
+
+.header__search-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 5.5rem;
+  border: none;
+  background-color: black;
+  transition: all 0.3s; }
+  .header__search-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7); }
+
+.data {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  transform: translateY(50%);
+  display: grid;
+  row-gap: 2rem;
+  background-color: white;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  padding: 3rem;
+  border-radius: 1.5rem;
+  z-index: 100;
+  justify-items: flex-start;
+  box-shadow: 0 4rem 3rem -2rem rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 63.25em) {
+    .data {
+      text-align: center; } }
+  @media only screen and (max-width: 43.75em) {
+    .data {
+      left: 2.7rem;
+      right: 2.7rem;
+      padding: 2rem; } }
+  .data__section {
+    position: relative;
+    width: 100%; }
+    .data__section:not(:first-child) {
+      padding-left: 3rem;
+      padding-right: 4rem; }
+      @media only screen and (max-width: 63.25em) {
+        .data__section:not(:first-child) {
+          padding-left: 0;
+          padding-right: 0; } }
+    .data__section::after {
+      content: '';
+      position: absolute;
+      top: 1rem;
+      bottom: 1rem;
+      left: 0;
+      width: 100%; }
+    .data__section:not(:last-child)::after {
+      border-right: 1px solid rgba(150, 150, 150, 0.7); }
+      @media only screen and (max-width: 63.25em) {
+        .data__section:not(:last-child)::after {
+          border-right: none; } }
+    @media only screen and (max-width: 43.75em) {
+      .data__section {
+        width: 100%; } }
+  .data__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    margin-bottom: 1rem; }
+    @media only screen and (max-width: 43.75em) {
+      .data__title {
+        margin-bottom: 0.6rem; } }
+  .data__data {
+    color: #2b2b2b;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.4; }
+    @media only screen and (max-width: 43.75em) {
+      .data__data {
+        line-height: 1; } }

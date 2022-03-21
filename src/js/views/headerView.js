@@ -1,17 +1,17 @@
-import patternImg from '../../images/pattern-bg.png';
+// import patternImg from '../../images/pattern-bg.png';
 
 class HeaderComponent {
     _parentElement = document.querySelector('header');
 
     constructor() {
-        this._addHeaderBackgroundImage();
+        // this._addHeaderBackgroundImage();
         window.addEventListener('load', this._clearInput.bind(this))
         this._parentElement.querySelector('.header__input').addEventListener('click', this._clearInput.bind(this));
     }
 
-    _addHeaderBackgroundImage() {
-        this._parentElement.style.backgroundImage = `url(${patternImg})`;
-    }
+    // _addHeaderBackgroundImage() {
+    //     this._parentElement.style.backgroundImage = `url(${patternImg})`;
+    // }
 
     renderError() {
         this._parentElement.querySelector('.header__input').value = '🔴🔴🔴 Not a valid IP!';
@@ -29,7 +29,7 @@ class HeaderComponent {
             const ip = this._parentElement.querySelector('.header__input').value;
             if (!ip) return
             handler(ip);
-            this._parentElement.querySelector('.header__input').value = '';
+            // this._parentElement.querySelector('.header__input').value = '';
         })
     }
 
