@@ -1,0 +1,1 @@
+export const IP_API = 'at_Nc6aAESwNKOdQXiIcJLtSdbbS3pzp';

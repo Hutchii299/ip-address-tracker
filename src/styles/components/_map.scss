@@ -1,0 +1,22 @@
+#map {
+  position: relative;
+  height: calc(100vh - 25rem);
+  width: 100%;
+  z-index: 1;
+
+  @include respond(small-desktop) {
+    height: calc(100vh - 28rem);
+  }
+
+  @include respond(tab-land) {
+    height: calc(100vh - 30rem);
+  }
+
+  @include respond(tab-port) {
+    height: calc(100vh - 32.5rem);
+  }
+}
+
+.leaflet-control-zoom {
+  display: none;
+}
