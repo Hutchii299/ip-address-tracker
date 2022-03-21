@@ -19,3 +19,4 @@ node_modules
 FEM-items
 dist
 .parcel-cache
+config.js
