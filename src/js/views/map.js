@@ -1,5 +1,5 @@
 
-import { MAP_KEY } from '../../../config.js';
+import { MAP_KEY } from '../config.js';
 
 class MapComponent {
     _map;

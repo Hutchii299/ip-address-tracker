@@ -1,4 +1,4 @@
-import { IP_API } from '../../../config.js';
+import { IP_API } from '../config.js';
 import { getIPData } from '../helpers.js';
 
 export const state = new Map([
