@@ -13,7 +13,7 @@ const errorCodes = new Map([
 ]);
 
 export const getIPData = async function (url) {
-    console.log(url);
+
     try {
         const response = await fetch(url);
         if (!response.ok) {
